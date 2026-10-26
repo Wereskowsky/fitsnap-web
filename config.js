@@ -7,6 +7,5 @@ export const TERMS_VERSION = 1;
 
 /** Legal pages, published next to the Mini App (sources in miniapp/legal). */
 export function legalUrl(doc, lang) {
-  const path = doc === "impressum" ? "legal/impressum.html" : `legal/${lang}/${doc}.html`;
-  return new URL(path, location.href).href;
+  return new URL(`legal/${lang}/${doc}.html`, location.href).href;
 }

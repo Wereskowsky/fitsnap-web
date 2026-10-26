@@ -916,7 +916,7 @@ function renderProfile() {
       h("button", { class: "secondary", onclick: () => push({ kind: "profileForm" }) }, t("profileEdit"))),
     h("section", { class: "card" },
       h("h3", {}, t("legal")),
-      [["terms", t("termsTitle")], ["privacy", t("privacyTitle")], ["impressum", "Impressum"]].map(([doc, label]) =>
+      [["terms", t("termsTitle")], ["privacy", t("privacyTitle")]].map(([doc, label]) =>
         h("p", {}, h("a", { href: "#", onclick: (e) => (e.preventDefault(), openLink(legalUrl(doc, lang()))) }, label)))),
     h("button", {
       class: "danger-button",

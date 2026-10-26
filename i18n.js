@@ -134,7 +134,7 @@ const T = {
     plansActive: "{tier} is active until {date}",
     plansThanks: "Thank you! The plan is active.",
     plansFailed: "The payment did not go through.",
-    plansNote: "Buying again adds 30 days. Switching to another plan keeps the value of the days you have paid for. Within 14 days of a purchase you get a full refund on request: /paysupport in the bot.",
+    plansNote: "Buying again adds 30 days. Switching to another plan keeps the value of the days you have paid for. If you need a refund, contact support: /paysupport in the bot.",
     plansTerms: "By paying you accept the {terms}.",
 
     profileEdit: "Edit profile",
@@ -267,7 +267,7 @@ const T = {
     plansActive: "{tier} ist aktiv bis {date}",
     plansThanks: "Danke! Der Tarif ist aktiv.",
     plansFailed: "Die Zahlung ist nicht durchgegangen.",
-    plansNote: "Ein weiterer Kauf fügt 30 Tage hinzu. Beim Wechsel des Tarifs bleibt der Wert der bezahlten Tage erhalten. Innerhalb von 14 Tagen nach dem Kauf erhältst du auf Wunsch den vollen Betrag zurück: /paysupport im Bot.",
+    plansNote: "Ein weiterer Kauf fügt 30 Tage hinzu. Beim Wechsel des Tarifs bleibt der Wert der bezahlten Tage erhalten. Wenn du eine Erstattung brauchst, wende dich an den Support: /paysupport im Bot.",
     plansTerms: "Mit der Zahlung akzeptierst du die {terms}.",
 
     profileEdit: "Profil bearbeiten",
@@ -400,7 +400,7 @@ const T = {
     plansActive: "{tier} активен до {date}",
     plansThanks: "Спасибо! Тариф активен.",
     plansFailed: "Оплата не прошла.",
-    plansNote: "Повторная покупка добавляет 30 дней. При смене тарифа оплаченные дни пересчитываются по цене и не теряются. В течение 14 дней после покупки вернём полную сумму по запросу: /paysupport в боте.",
+    plansNote: "Повторная покупка добавляет 30 дней. При смене тарифа оплаченные дни пересчитываются по цене и не теряются. В случае необходимости возврата средств свяжитесь со службой поддержки: /paysupport в боте.",
     plansTerms: "Оплачивая, вы принимаете {terms}.",
 
     profileEdit: "Изменить профиль",
