@@ -1,4 +1,4 @@
-# FitSnap web
+# FitSnap web (moved)
 
-Static files of the FitSnap Telegram Mini App, published with GitHub Pages.
-The source lives in the main FitSnap repository (`miniapp/`); this repository only holds the published copy.
+The FitSnap Mini App and its legal pages moved to Yandex Cloud, because GitHub Pages does not load
+in Russia. The pages here only redirect to the new address, so old bot buttons keep working.
