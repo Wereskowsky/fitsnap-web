@@ -5,7 +5,7 @@
 // users cannot inject markup.
 
 import { ApiError, createApi, lookupBarcode } from "./api.js";
-import { LEGAL, TERMS_VERSION } from "./config.js";
+import { legalUrl, TERMS_VERSION } from "./config.js";
 import { ALLERGENS, allergenName, formatDate, lang, langOf, LANGS, setLang, t } from "./i18n.js";
 import { dailyTarget, entryTotals, localDay, shiftDay, sum } from "./nutrition.js";
 
@@ -213,7 +213,11 @@ function renderConsent() {
   const link = (label, url) =>
     url ? h("a", { href: "#", onclick: (e) => (e.preventDefault(), openLink(url)) }, label) : label;
   const termsLine = t("consentTerms").split(/(\{terms\}|\{privacy\})/).map((part) =>
-    part === "{terms}" ? link(t("termsLink"), LEGAL.terms) : part === "{privacy}" ? link(t("privacyLink"), LEGAL.privacy) : part
+    part === "{terms}"
+      ? link(t("termsLink"), legalUrl("terms", lang()))
+      : part === "{privacy}"
+      ? link(t("privacyLink"), legalUrl("privacy", lang()))
+      : part
   );
   button.onclick = () => {
     state.consented = true;
@@ -882,6 +886,11 @@ function renderPlans() {
         button);
     }),
     h("p", { class: "muted small" }, t("plansNote")),
+    h("p", { class: "muted small" }, t("plansTerms").split(/(\{terms\})/).map((part) =>
+      part === "{terms}"
+        ? h("a", { href: "#", onclick: (e) => (e.preventDefault(), openLink(legalUrl("terms", lang()))) }, t("termsLink"))
+        : part
+    )),
   ];
 }
 
@@ -905,12 +914,10 @@ function renderProfile() {
       h("p", { class: "muted" }, `${t("activity" + p.activity)} · ${t("goal" + p.goal)}`),
       p.allergens.length ? h("p", { class: "muted" }, `${t("allergiesTitle")}: ${p.allergens.map(allergenName).join(", ")}`) : null,
       h("button", { class: "secondary", onclick: () => push({ kind: "profileForm" }) }, t("profileEdit"))),
-    LEGAL.terms || LEGAL.privacy
-      ? h("section", { class: "card" },
-        h("h3", {}, t("legal")),
-        LEGAL.terms ? h("p", {}, h("a", { href: "#", onclick: (e) => (e.preventDefault(), openLink(LEGAL.terms)) }, t("termsLink"))) : null,
-        LEGAL.privacy ? h("p", {}, h("a", { href: "#", onclick: (e) => (e.preventDefault(), openLink(LEGAL.privacy)) }, t("privacyLink"))) : null)
-      : null,
+    h("section", { class: "card" },
+      h("h3", {}, t("legal")),
+      [["terms", t("termsTitle")], ["privacy", t("privacyTitle")], ["impressum", "Impressum"]].map(([doc, label]) =>
+        h("p", {}, h("a", { href: "#", onclick: (e) => (e.preventDefault(), openLink(legalUrl(doc, lang()))) }, label)))),
     h("button", {
       class: "danger-button",
       onclick: async () => {

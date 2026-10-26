@@ -5,8 +5,8 @@ export const API_BASE = "https://dncfejpkbfkfcytcvdna.supabase.co/functions/v1/t
 /** Version of the Telegram product's terms; bump to ask everyone for consent again. */
 export const TERMS_VERSION = 1;
 
-// Public legal pages for the Telegram product (empty until they are published).
-export const LEGAL = {
-  terms: "",
-  privacy: "",
-};
+/** Legal pages, published next to the Mini App (sources in miniapp/legal). */
+export function legalUrl(doc, lang) {
+  const path = doc === "impressum" ? "legal/impressum.html" : `legal/${lang}/${doc}.html`;
+  return new URL(path, location.href).href;
+}

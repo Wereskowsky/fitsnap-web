@@ -41,6 +41,8 @@ const T = {
     termsLink: "Terms of Use",
     privacyLink: "Privacy Policy",
     consentContinue: "Agree and continue",
+    termsTitle: "Terms of Use",
+    privacyTitle: "Privacy Policy",
 
     profileTitle: "About you",
     name: "Name",
@@ -132,7 +134,8 @@ const T = {
     plansActive: "{tier} is active until {date}",
     plansThanks: "Thank you! The plan is active.",
     plansFailed: "The payment did not go through.",
-    plansNote: "Buying again adds 30 days. Switching to another plan keeps the value of the days you have paid for. Questions about payments: /paysupport in the bot.",
+    plansNote: "Buying again adds 30 days. Switching to another plan keeps the value of the days you have paid for. Within 14 days of a purchase you get a full refund on request: /paysupport in the bot.",
+    plansTerms: "By paying you accept the {terms}.",
 
     profileEdit: "Edit profile",
     dailyTarget: "Daily target",
@@ -171,6 +174,8 @@ const T = {
     termsLink: "Nutzungsbedingungen",
     privacyLink: "Datenschutzerklärung",
     consentContinue: "Zustimmen und weiter",
+    termsTitle: "Nutzungsbedingungen",
+    privacyTitle: "Datenschutzerklärung",
 
     profileTitle: "Über dich",
     name: "Name",
@@ -262,7 +267,8 @@ const T = {
     plansActive: "{tier} ist aktiv bis {date}",
     plansThanks: "Danke! Der Tarif ist aktiv.",
     plansFailed: "Die Zahlung ist nicht durchgegangen.",
-    plansNote: "Ein weiterer Kauf fügt 30 Tage hinzu. Beim Wechsel des Tarifs bleibt der Wert der bezahlten Tage erhalten. Fragen zu Zahlungen: /paysupport im Bot.",
+    plansNote: "Ein weiterer Kauf fügt 30 Tage hinzu. Beim Wechsel des Tarifs bleibt der Wert der bezahlten Tage erhalten. Innerhalb von 14 Tagen nach dem Kauf erhältst du auf Wunsch den vollen Betrag zurück: /paysupport im Bot.",
+    plansTerms: "Mit der Zahlung akzeptierst du die {terms}.",
 
     profileEdit: "Profil bearbeiten",
     dailyTarget: "Tagesziel",
@@ -301,6 +307,8 @@ const T = {
     termsLink: "Условия использования",
     privacyLink: "Политику конфиденциальности",
     consentContinue: "Согласиться и продолжить",
+    termsTitle: "Условия использования",
+    privacyTitle: "Политика конфиденциальности",
 
     profileTitle: "О вас",
     name: "Имя",
@@ -392,7 +400,8 @@ const T = {
     plansActive: "{tier} активен до {date}",
     plansThanks: "Спасибо! Тариф активен.",
     plansFailed: "Оплата не прошла.",
-    plansNote: "Повторная покупка добавляет 30 дней. При смене тарифа оплаченные дни пересчитываются по цене и не теряются. Вопросы об оплате: /paysupport в боте.",
+    plansNote: "Повторная покупка добавляет 30 дней. При смене тарифа оплаченные дни пересчитываются по цене и не теряются. В течение 14 дней после покупки вернём полную сумму по запросу: /paysupport в боте.",
+    plansTerms: "Оплачивая, вы принимаете {terms}.",
 
     profileEdit: "Изменить профиль",
     dailyTarget: "Дневная норма",
